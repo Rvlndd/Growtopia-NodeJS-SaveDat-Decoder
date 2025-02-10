@@ -90,12 +90,7 @@ class Decoder {
     }
 }
 
-function saveToFile(data, filename) {
-    fs.writeFileSync(filename, JSON.stringify(data, null, 4), "utf8");
-    console.log(`svd to save.json`);
-}
 
 const decoder = new Decoder(savedatPath);
 const decodedContent = decoder.decodeFile();
-saveToFile(decodedContent, "save.json");
-          
+fs.writeFileSync("save.json", JSON.stringify(data, null, 4), "utf8");
