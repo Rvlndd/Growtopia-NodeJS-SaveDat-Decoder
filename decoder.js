@@ -93,4 +93,4 @@ class Decoder {
 
 const decoder = new Decoder(savedatPath);
 const decodedContent = decoder.decodeFile();
-fs.writeFileSync("save.json", JSON.stringify(data, null, 4), "utf8");
+fs.writeFileSync("save.json", JSON.stringify(decodedContent, null, 4), "utf8");
